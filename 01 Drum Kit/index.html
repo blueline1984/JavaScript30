@@ -56,15 +56,28 @@
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
     <script>
-      document.addEventListener("keypress", (event) => {
+      function playSound(event) {
         const audio = document.querySelector(
           `audio[data-key="${event.keyCode}"]`
         );
         const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
         audio.currentTime = 0;
-        if (!audio) return; //등록되어 있지 않은 키 누를 경우 중단시키기
+        if (!audio) return;
         audio.play();
-      });
+        key.classList.add("playing");
+      }
+
+      function removeTransition(event) {
+        if (event.propertyName !== "transform") return;
+        this.classList.remove("playing");
+      }
+
+      const keys = document.querySelectorAll(".key");
+      keys.forEach((key) =>
+        key.addEventListener("transitionend", removeTransition)
+      );
+
+      document.addEventListener("keypress", playSound);
     </script>
   </body>
 </html>
