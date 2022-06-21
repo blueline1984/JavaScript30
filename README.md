@@ -6,9 +6,10 @@
 ### What I Learned
 
 ```
-1. HTMl data attribute
+1. HTML data attribute
 2. <audio> tag
 3. document.addEventListener("eventType", callback);
 4. transitionend event
 5. document.querySelector("a[target]");
+6. element.classList
 ```
