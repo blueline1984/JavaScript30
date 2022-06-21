@@ -7,39 +7,39 @@
   </head>
   <body>
     <div class="keys">
-      <div date-key="65" class="key">
+      <div data-key="65" class="key">
         <kbd>A</kbd>
         <span class="sound">clap</span>
       </div>
-      <div date-key="83" class="key">
+      <div data-key="83" class="key">
         <kbd>S</kbd>
         <span class="sound">hihat</span>
       </div>
-      <div date-key="68" class="key">
+      <div data-key="68" class="key">
         <kbd>D</kbd>
         <span class="sound">kick</span>
       </div>
-      <div date-key="70" class="key">
+      <div data-key="70" class="key">
         <kbd>F</kbd>
         <span class="sound">openhat</span>
       </div>
-      <div date-key="71" class="key">
+      <div data-key="71" class="key">
         <kbd>G</kbd>
         <span class="sound">boom</span>
       </div>
-      <div date-key="72" class="key">
+      <div data-key="72" class="key">
         <kbd>H</kbd>
         <span class="sound">ride</span>
       </div>
-      <div date-key="74" class="key">
+      <div data-key="74" class="key">
         <kbd>J</kbd>
         <span class="sound">snare</span>
       </div>
-      <div date-key="75" class="key">
+      <div data-key="75" class="key">
         <kbd>K</kbd>
         <span class="sound">tom</span>
       </div>
-      <div date-key="76" class="key">
+      <div data-key="76" class="key">
         <kbd>L</kbd>
         <span class="sound">tink</span>
       </div>
@@ -55,6 +55,16 @@
     <audio data-key="75" src="sounds/tom.wav"></audio>
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
-    <script></script>
+    <script>
+      document.addEventListener("keypress", (event) => {
+        const audio = document.querySelector(
+          `audio[data-key="${event.keyCode}"]`
+        );
+        const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+        audio.currentTime = 0;
+        if (!audio) return; //등록되어 있지 않은 키 누를 경우 중단시키기
+        audio.play();
+      });
+    </script>
   </body>
 </html>
