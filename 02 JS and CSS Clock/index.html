@@ -16,6 +16,8 @@
 
     <script>
       const secondHand = document.querySelector(".second-hand");
+      const minuteHand = document.querySelector(".min-hand");
+      const hourHand = document.querySelector(".hour-hand");
       function setDate() {
         const now = new Date();
         const seconds = now.getSeconds();
@@ -23,7 +25,9 @@
         secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
         const minutes = now.getMinutes();
-        // const minutesDegress = ()
+        const minutesDegrees = minutes + 180;
+        console.log(minutesDegrees);
+        minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
       }
 
       setInterval(setDate, 1000); //1초 마다 실행
