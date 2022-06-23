@@ -41,25 +41,36 @@
         step="0.1"
       />
 
-      <label for="base">Base Color</label>
-      <input id="base" type="color" name="base" value="#ffc600" />
-    </div>
+      <label for="brightness">Brightness:</label>
+      <input
+        id="brightness"
+        type="range"
+        name="brightness"
+        min="0"
+        max="1"
+        value="1"
+        step="0.1"
+      />
 
-    <img src="./background.jpg" />
-    <img src="./background.jpg" />
+      <label for="base">Base Color</label>
+      <input id="base" type="color" name="base" value="#f73d93" />
+    </div>
     <img src="./background.jpg" />
 
     <style>
       :root {
-        --base: #ffc600;
+        --base: #f73d93;
         --spacing: 10px;
+        --blur: 0px;
+        --opacity: 1;
+        --brightness: 1;
       }
 
       img {
         padding: var(--spacing);
         background: var(--base);
-        filter: blur(var(--blur));
-        filter: opacity(var(--opacity));
+        filter: blur(var(--blur)) opacity(var(--opacity))
+          brightness(var(--brightness));
       }
 
       .hl {
@@ -68,7 +79,7 @@
 
       body {
         text-align: center;
-        background: #193549;
+        background: #16003b;
         color: white;
         font-family: "helvetica neue", sans-serif;
         font-weight: 100;
