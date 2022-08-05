@@ -63,3 +63,23 @@ Array Method
 - initialValue
   reducer 함수 최초 호출시 첫번째 인수에 제공하는 값
 ```
+
+## 05 Flex Panel Gallery
+
+::before 에 대해서
+
+inherit에 대해
+
+CSS 태그 및 속성
+`*` 태그
+overflow
+
+vh? em?
+
+cubic-bezier?
+
+background-image:url
+
+p:nth-child(2)
+
+flex: 1;
