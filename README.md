@@ -66,28 +66,154 @@ Array Method
 
 ## 05 Flex Panel Gallery
 
-::before 에 대해서
+1. CSS 가상요소와 가상클래스
 
-inherit에 대해
+- CSS 가상 요소는 선택자로 선택한 요소의 뒤에 붙여 표기하는 미리 약속된 키워드를 일컫는다.
 
-CSS 태그 및 속성
-`*` 태그
-overflow
+- 콜론(:) 2개를 연달아 붙이는 것으로 가상요소를 나타낸다. ex) `::before`
 
-vh? em?
+- 가상 클래스는 콜론(:) 1개로 나타낸다. ex) `*:before`
 
-cubic-bezier?
+- `::before`, `::after` 가상 요소는 HTML 태그, JavaScript 없이도 HTML 페이지 안에 콘텐츠, 또는 디자인 요소를 추가할 수 있는 특별한 기능을 한다.
+  - `::before`
+    요소 내용 앞쪽에 새로운 내용 추가
+  - `::after`
+    요소 내용 끝에 새로운 내용 추가
 
-background-image:url
+2. CSS inherit
 
-p:nth-child(2)
+- 해당 요소의 부모 요소의 속성 값을 상속받아 사용한다.
 
-flex: 1;
+```
+html {
+  box-sizing: border-box;
+  background: #ffc600;
+  font-family: "helvetica neue";
+  font-size: 20px;
+  font-weight: 200;
+}
 
-classList
+*,
+*:before,
+*:after {
+  box-sizing: inherit; //box-sizing: border-box
+}
 
-HTML DOMTokenList
+//부모의 box-sizing 속성 값을 상속
+```
 
-transitionend
+3. `*` 선택자 (전체 선택자)
 
-addEventListne 에서의 this -> event.currentTarget 해당 이벤트가 발생한 요소
+- 모든 형태의 요소를 선택한다.
+- 브라우저에 부하를 줄 수 있기때문에 사용에 유의한다.
+
+4.  overflow 속성
+
+- overflow 속성은 요소의 content가 해당 영역에 들어가기에 큰 경우, 해당 content를 자르거나 scrollbar를 추가하여 처리할 수 있다.
+
+- height(높이 속성값)을 갖고 있는 블럭 요소에만 적용 가능하다.
+
+- `visible`, `hidden`, `scorll`, `auto` 등의 속성을 갖는다.
+
+5. CSS Units - Relative Lengths
+
+- CSS 길이 속성에 사용한다. `width, margin, padding, font-size` 등.
+
+- em, rem
+
+  - em: 해당 요소의 크기를 해당 요소의 부모 요소를 기준으로 정한다.
+  - rem: 해당 요소의 크기를 최상단의 root 요소를 기준으로 정한다.
+
+  ```
+  //em
+  div {
+    font-size: 30px;
+  }
+
+  span {
+    font-size: 0.5em;
+  }
+
+  //...
+
+  <div>The font-size of the div element is set to 30px.
+    <span>The span element inside the div element has a font-size of 0.5em, which equals to 0.5x30 = 15px</span>.
+  </div>
+
+
+  //rem
+  html {
+    font-size:16px;
+  }
+
+  div {
+    font-size: 3rem;
+  }
+
+  //...
+
+  <div>The font-size of this div element is 3rem.</div>
+  ```
+
+- vh, vw
+  - viewport height, viewport width를 의미한다. (viewport: 웹페이지가 사용자에게 보여지는 영역)
+  - 브라우저 화면 전체의 높이, 너비를 100vh, 100vw로 한다.
+  - 이와 마찬가지로 살펴보면, 50vw는 전체 화면 너비의 50%, 1vh는 전체화면 높이의 1% 이다.
+  - viewport의 크기가 변하면 그에 따라 요소의 길이가 변한다.(반응형)
+
+6. A:nth-child(N)
+
+- 부모 요소안의 <A> 태그의 N번째 요소를 가리킨다.
+- 예제의 경우는 p:nth-child(2) 이므로 클래스가 panel인 태그 즉, <div> 태그의 자식요소 중 <p>태그의 2번째 요소를 가리킨다.
+
+7. classList
+
+- classList 속성은 해당 요소의 CSS class name을 배열에 담아(유사배열객체) 반환하고 DOMTokenList를 반환한다.
+- <img width="629" alt="스크린샷 2022-08-06 오후 11 00 47" src="https://user-images.githubusercontent.com/97525377/183252168-b9d6c94a-e670-4e4e-886e-f1bf46142252.png">
+
+8. HTML DOMTokenList
+
+- <img width="629" alt="스크린샷 2022-08-06 오후 11 00 47" src="https://user-images.githubusercontent.com/97525377/183252168-b9d6c94a-e670-4e4e-886e-f1bf46142252.png">
+  출처: https://www.w3schools.com/jsref/dom_obj_html_domtokenlist.asp
+
+9. addEventListne 에서의 this
+
+- event.currentTarget 해당 이벤트가 발생한 요소
+
+```
+ <div class="panels">
+    <div class="panel panel1">
+      <p>Hey</p>
+      <p>Let's</p>
+      <p>Dance</p>
+    </div>
+    <div class="panel panel2">
+      <p>Give</p>
+      <p>Take</p>
+      <p>Receive</p>
+    </div>
+    <div class="panel panel3">
+      <p>Experience</p>
+      <p>It</p>
+      <p>Today</p>
+    </div>
+    <div class="panel panel4">
+      <p>Give</p>
+      <p>All</p>
+      <p>You can</p>
+    </div>
+    <div class="panel panel5">
+      <p>Life</p>
+      <p>In</p>
+      <p>Motion</p>
+    </div>
+</div>
+
+<script>
+function openToggle() {
+  this.classList.toggle("open"); // this는 각각의 <div class="panel"> 태그를 가리킴
+}
+
+panels.forEach((panel) => panel.addEventListener("click", openToggle));
+</script>
+```

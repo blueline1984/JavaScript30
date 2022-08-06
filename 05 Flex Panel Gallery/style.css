@@ -87,7 +87,7 @@ body {
 }
 
 .panel p:nth-child(2) {
-  font-size: 4em;
+  font-size: 5em;
 }
 
 .panel.open {
