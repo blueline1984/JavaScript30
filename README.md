@@ -65,8 +65,7 @@ Array Method
 ```
 
 ## 05 Flex Panel Gallery
-
-1. CSS 가상요소와 가상클래스
+### 1. CSS 가상요소와 가상클래스
 
 - CSS 가상 요소는 선택자로 선택한 요소의 뒤에 붙여 표기하는 미리 약속된 키워드를 일컫는다.
 
@@ -80,7 +79,7 @@ Array Method
   - `::after`
     요소 내용 끝에 새로운 내용 추가
 
-2. CSS inherit
+### 2. CSS inherit
 
 - 해당 요소의 부모 요소의 속성 값을 상속받아 사용한다.
 
@@ -102,21 +101,19 @@ html {
 //부모의 box-sizing 속성 값을 상속
 ```
 
-3. `*` 선택자 (전체 선택자)
-
+### 3. `*` 선택자 (전체 선택자)
 - 모든 형태의 요소를 선택한다.
+
 - 브라우저에 부하를 줄 수 있기때문에 사용에 유의한다.
 
-4.  overflow 속성
-
+### 4.  overflow 속성
 - overflow 속성은 요소의 content가 해당 영역에 들어가기에 큰 경우, 해당 content를 자르거나 scrollbar를 추가하여 처리할 수 있다.
 
 - height(높이 속성값)을 갖고 있는 블럭 요소에만 적용 가능하다.
 
 - `visible`, `hidden`, `scorll`, `auto` 등의 속성을 갖는다.
 
-5. CSS Units - Relative Lengths
-
+### 5. CSS Units - Relative Lengths
 - CSS 길이 속성에 사용한다. `width, margin, padding, font-size` 등.
 
 - em, rem
@@ -161,24 +158,23 @@ html {
   - 이와 마찬가지로 살펴보면, 50vw는 전체 화면 너비의 50%, 1vh는 전체화면 높이의 1% 이다.
   - viewport의 크기가 변하면 그에 따라 요소의 길이가 변한다.(반응형)
 
-6. A:nth-child(N)
-
+### 6. A:nth-child(N)
 - 부모 요소안의 <A> 태그의 N번째 요소를 가리킨다.
+  
 - 예제의 경우는 p:nth-child(2) 이므로 클래스가 panel인 태그 즉, <div> 태그의 자식요소 중 <p>태그의 2번째 요소를 가리킨다.
-
-7. classList
-
+  
+### 7. classList
 - classList 속성은 해당 요소의 CSS class name을 배열에 담아(유사배열객체) 반환하고 DOMTokenList를 반환한다.
-- <img width="629" alt="스크린샷 2022-08-06 오후 11 00 47" src="https://user-images.githubusercontent.com/97525377/183252168-b9d6c94a-e670-4e4e-886e-f1bf46142252.png">
+<img width="487" alt="스크린샷 2022-08-06 오후 11 05 22" src="https://user-images.githubusercontent.com/97525377/183252536-c8b736c0-b74f-4044-88fd-d7a52c3fff13.png">
 
-8. HTML DOMTokenList
 
-- <img width="629" alt="스크린샷 2022-08-06 오후 11 00 47" src="https://user-images.githubusercontent.com/97525377/183252168-b9d6c94a-e670-4e4e-886e-f1bf46142252.png">
+### 8. HTML DOMTokenList
+<img width="629" alt="스크린샷 2022-08-06 오후 11 00 47" src="https://user-images.githubusercontent.com/97525377/183252168-b9d6c94a-e670-4e4e-886e-f1bf46142252.png">
   출처: https://www.w3schools.com/jsref/dom_obj_html_domtokenlist.asp
 
-9. addEventListne 에서의 this
+### 9. addEventListne에서의 this
 
-- event.currentTarget 해당 이벤트가 발생한 요소
+- event.currentTarget(해당 이벤트가 발생한 요소)을 가리킨다.
 
 ```
  <div class="panels">
