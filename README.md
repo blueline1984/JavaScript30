@@ -1,6 +1,14 @@
 # JavaScript30
+## Completed List
+- [01 Drum Kit](#01-drum-kit) 22.06.21
+- [02 JS and CSS Clock](02-js-and-css-clock) 22.06.22
+- [03 CSS Variables](03-css-variables) 22.06.23
+- [04 Array Cardio Day 1](04-array-cardio-day-1)
+- [05 Flex Panel Gallery](05-flex-panel-gallery) 22.08.06
 
-## 01 Drum Kit 22.06.21
+
+
+## 01 Drum Kit
 
 <img width="1894" alt="Drum kit backgroud" src="https://user-images.githubusercontent.com/97525377/174822161-a0b70c4d-8b48-4420-9464-26a9c2396422.png">
 
@@ -65,6 +73,7 @@ Array Method
 ```
 
 ## 05 Flex Panel Gallery
+
 ### 1. CSS 가상요소와 가상클래스
 
 - CSS 가상 요소는 선택자로 선택한 요소의 뒤에 붙여 표기하는 미리 약속된 키워드를 일컫는다.
