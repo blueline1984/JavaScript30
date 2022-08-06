@@ -83,3 +83,11 @@ background-image:url
 p:nth-child(2)
 
 flex: 1;
+
+classList
+
+HTML DOMTokenList
+
+transitionend
+
+addEventListne 에서의 this -> event.currentTarget 해당 이벤트가 발생한 요소

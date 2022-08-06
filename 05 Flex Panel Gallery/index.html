@@ -38,7 +38,23 @@
         <p>Motion</p>
       </div>
     </div>
+    <script>
+      const panels = document.querySelectorAll(".panel");
 
-    <script></script>
+      function openToggle() {
+        this.classList.toggle("open");
+      }
+
+      function toggleActive(event) {
+        if (event.propertyName.includes("flex")) {
+          this.classList.toggle("open-active");
+        }
+      }
+
+      panels.forEach((panel) => panel.addEventListener("click", openToggle));
+      panels.forEach((panel) =>
+        panel.addEventListener("transitionend", toggleActive)
+      );
+    </script>
   </body>
 </html>
