@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Type Ahead 👀</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="search-form">
+      <input type="text" class="search" placeholder="City of State" />
+      <ul class="suggestions" id="suggestion">
+        <li>Filter for a city</li>
+        <li>or a state</li>
+      </ul>
+    </form>
+    <script>
+      function setLists(results) {
+        for (const state of results) {
+          const resultItem = document.createElement("li");
+          resultItem.classList.add("result-item");
+          const city = document.createTextNode(state.city);
+          resultItem.appendChild(city);
+          suggestion.appendChild(resultItem);
+        }
+      }
+      const endpoint =
+        "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";
+      fetch(endpoint)
+        .then((response) => response.json())
+        .then((outputs) => {
+          console.log("outputs", outputs);
+          const searchInput = document.querySelector("input");
+          searchInput.addEventListener("input", (event) => {
+            setLists(
+              outputs.filter((output) => {
+                return output.city.includes(event.target.value);
+              })
+            );
+            // outputs.filter((output) => {
+            //   output.city === event.target.value;
+            //   // output.city === event.target.value;
+            // });
+          });
+        });
+    </script>
+  </body>
+</html>

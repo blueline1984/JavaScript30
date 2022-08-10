@@ -1,12 +1,12 @@
 # JavaScript30
+
 ## Completed List
+
 - [01 Drum Kit](#01-drum-kit) 22.06.21
 - [02 JS and CSS Clock](02-js-and-css-clock) 22.06.22
 - [03 CSS Variables](03-css-variables) 22.06.23
 - [04 Array Cardio Day 1](04-array-cardio-day-1)
 - [05 Flex Panel Gallery](05-flex-panel-gallery) 22.08.06
-
-
 
 ## 01 Drum Kit
 
@@ -111,11 +111,13 @@ html {
 ```
 
 ### 3. `*` 선택자 (전체 선택자)
+
 - 모든 형태의 요소를 선택한다.
 
 - 브라우저에 부하를 줄 수 있기때문에 사용에 유의한다.
 
-### 4.  overflow 속성
+### 4. overflow 속성
+
 - overflow 속성은 요소의 content가 해당 영역에 들어가기에 큰 경우, 해당 content를 자르거나 scrollbar를 추가하여 처리할 수 있다.
 
 - height(높이 속성값)을 갖고 있는 블럭 요소에만 적용 가능하다.
@@ -123,6 +125,7 @@ html {
 - `visible`, `hidden`, `scorll`, `auto` 등의 속성을 갖는다.
 
 ### 5. CSS Units - Relative Lengths
+
 - CSS 길이 속성에 사용한다. `width, margin, padding, font-size` 등.
 
 - em, rem
@@ -168,16 +171,18 @@ html {
   - viewport의 크기가 변하면 그에 따라 요소의 길이가 변한다.(반응형)
 
 ### 6. A:nth-child(N)
-- 부모 요소안의 <A> 태그의 N번째 요소를 가리킨다.
-  
-- 예제의 경우는 p:nth-child(2) 이므로 클래스가 panel인 태그 즉, <div> 태그의 자식요소 중 <p>태그의 2번째 요소를 가리킨다.
-  
-### 7. classList
-- classList 속성은 해당 요소의 CSS class name을 배열에 담아(유사배열객체) 반환하고 DOMTokenList를 반환한다.
-<img width="487" alt="스크린샷 2022-08-06 오후 11 05 22" src="https://user-images.githubusercontent.com/97525377/183252536-c8b736c0-b74f-4044-88fd-d7a52c3fff13.png">
 
+- 부모 요소안의 <A> 태그의 N번째 요소를 가리킨다.
+
+- 예제의 경우는 p:nth-child(2) 이므로 클래스가 panel인 태그 즉, <div> 태그의 자식요소 중 <p>태그의 2번째 요소를 가리킨다.
+
+### 7. classList
+
+- classList 속성은 해당 요소의 CSS class name을 배열에 담아(유사배열객체) 반환하고 DOMTokenList를 반환한다.
+  <img width="487" alt="스크린샷 2022-08-06 오후 11 05 22" src="https://user-images.githubusercontent.com/97525377/183252536-c8b736c0-b74f-4044-88fd-d7a52c3fff13.png">
 
 ### 8. HTML DOMTokenList
+
 <img width="629" alt="스크린샷 2022-08-06 오후 11 00 47" src="https://user-images.githubusercontent.com/97525377/183252168-b9d6c94a-e670-4e4e-886e-f1bf46142252.png">
   출처: https://www.w3schools.com/jsref/dom_obj_html_domtokenlist.asp
 
@@ -222,3 +227,10 @@ function openToggle() {
 panels.forEach((panel) => panel.addEventListener("click", openToggle));
 </script>
 ```
+
+## 06 Type Ahead 22.08.10
+
+css
+inset
+nth-child(even)
+transform: perspective, rotateX..translateY(2px) scale(1.001);
