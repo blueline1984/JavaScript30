@@ -3,10 +3,11 @@
 ## Completed List
 
 - [01 Drum Kit](#01-drum-kit) 22.06.21
-- [02 JS and CSS Clock](02-js-and-css-clock) 22.06.22
-- [03 CSS Variables](03-css-variables) 22.06.23
-- [04 Array Cardio Day 1](04-array-cardio-day-1)
-- [05 Flex Panel Gallery](05-flex-panel-gallery) 22.08.06
+- [02 JS and CSS Clock](#02-js-and-css-clock) 22.06.22
+- [03 CSS Variables](#03-css-variables) 22.06.23
+- [04 Array Cardio Day 1](#04-array-cardio-day-1)
+- [05 Flex Panel Gallery](#05-flex-panel-gallery) 22.08.06
+- [07 Array Cardio Day 2](#06-array-cardio-day-2) 22.10.28
 
 ## 01 Drum Kit
 
