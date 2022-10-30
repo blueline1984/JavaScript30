@@ -7,7 +7,7 @@
 - [03 CSS Variables](#03-css-variables) 22.06.23
 - [04 Array Cardio Day 1](#04-array-cardio-day-1)
 - [05 Flex Panel Gallery](#05-flex-panel-gallery) 22.08.06
-- [07 Array Cardio Day 2](#06-array-cardio-day-2) 22.10.28
+- [07 Array Cardio Day 2](#07-array-cardio-day-2) 22.10.28
 
 ## 01 Drum Kit
 
@@ -237,7 +237,7 @@ nth-child(even)
 transform: perspective, rotateX..translateY(2px) scale(1.001);
 
 
-## 07 Type Ahead 22.10.28
+## 07 Array Cardio Day 2 22.10.28
 - `Array.prototype.some()`
   배열 안의 어떤 요소라도(하나라도) 주어진 판별 함수를 통과하는지 확인하고 통과하는 요소가 하나라도 있다면 true, 하나도 없다면 false를 반환합니다.
 
