@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Mouse Event</h2>
+  <p>
+    X: <span id="coordinate-x"></span>
+  </p>
+  <p>
+    Y: <span id="coordinate-y"></span>
+  </p>
+  <p>
+    Offset X: <span id="coordinate-offset-x"></span>
+  </p>
+  <p>
+    Offset Y: <span id="coordinate-offset-y"></span>
+  </p>
+  <p>
+    Screen X: <span id="coordinate-screen-x"></span>
+  </p>
+  <p>
+    Screen Y: <span id="coordinate-screen-y"></span>
+  </p>
+  <p>
+    Client X: <span id="coordinate-client-x"></span>
+  </p>
+  <p>
+    Client Y: <span id="coordinate-client-y"></span>
+  </p>
+  <p>
+    Page X: <span id="coordinate-page-x"></span>
+  </p>
+  <p>
+    Page Y: <span id="coordinate-page-y"></span>
+  </p>
+  
+  <p id="box1"></p>
+  <p id="box2"></p>
+  <script>
+    window.addEventListener('mousemove', (event) => {
+      document.getElementById("coordinate-x").textContent = event.x;
+      document.getElementById("coordinate-y").textContent = event.y;
+      document.getElementById("coordinate-offset-x").textContent = event.offsetX;
+      document.getElementById("coordinate-offset-y").textContent = event.offsetY;
+      document.getElementById("coordinate-screen-x").textContent = event.screenX;
+      document.getElementById("coordinate-screen-y").textContent = event.screenY;
+      document.getElementById("coordinate-client-x").textContent = event.clientX;
+      document.getElementById("coordinate-client-y").textContent = event.clientY;
+      document.getElementById("coordinate-page-x").textContent = event.pageX;
+      document.getElementById("coordinate-page-y").textContent = event.pageY;
+    });
+
+    window.addEventListener("mousedown", (event) => {
+      console.log(event)
+    })
+  </script>
+  <style>
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    #box1 {
+      width: 100px;
+      height: 100px;
+      background-color:aqua;
+      position: absolute;
+      left: 120%;
+    }
+
+    #box2 {
+      width: 100px;
+      height: 100px;
+      background-color: greenyellow;
+      position: absolute;
+      left: 100%;
+    }
+  </style>
+</body>
+</html>

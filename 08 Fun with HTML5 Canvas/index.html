@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+</head>
+<body>
+  <canvas id="draw" width="800" height="800"></canvas>
+  <script>
+    //1. 캔버스 요소 가져오기
+    const canvas = document.querySelector("#draw");
+
+    //2. 컨텍스트 ctx
+    const ctx = canvas.getContext("2d");
+
+    //3. 캔버스 사이즈 설정
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  
+    ctx.strokeStyle = "#BADA55";
+    ctx.linejoin = "round";
+    ctx.lineCap = "round";
+    ctx.lineWidth = 50;
+    ctx.globalCompositeOperation = "multiply";
+
+    // flag 설정(그리는 중인지 아닌지 확인하는 flag)
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+    let hue = 0;
+    let direction = true;
+
+    const draw = (event) => {
+      if (!isDrawing) return; // 마우스를 누르지 않을 때 함수 실행 중단 시키기
+
+      ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(event.offsetX, event.offsetY);
+      ctx.stroke();
+      [lastX, lastY] = [event.offsetX, event.offsetY];
+      hue++;
+
+      if (hue >= 360) {
+        hue = 0;
+      }
+
+      if (ctx.lineWidth >= 50 || ctx.lineWidth <= 20) {
+        direction = !direction;
+      }
+
+      if (direction) {
+        ctx.lineWidth++;
+      } else {
+        ctx.lineWidth--;
+      }
+      console.log(ctx.lineWidth);
+    }
+
+    canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("mousedown", () => {
+      isDrawing = true;
+      [lastX, lastY] = [event.offsetX, event.offsetY];
+    });
+    canvas.addEventListener("mouseup", () => isDrawing = false);
+    canvas.addEventListener("mouseout", () => isDrawing = false);
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+    }
+
+    .canvas-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</body>
+</html>

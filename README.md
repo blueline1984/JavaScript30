@@ -8,6 +8,8 @@
 - [04 Array Cardio Day 1](#04-array-cardio-day-1)
 - [05 Flex Panel Gallery](#05-flex-panel-gallery) 22.08.06
 - [07 Array Cardio Day 2](#06-array-cardio-day-2) 22.10.28
+- [08 Fun with HTML5 Canvas](#07-fun-with-html5-canvas) 22.10.31
+
 
 ## 01 Drum Kit
 
@@ -249,3 +251,32 @@ transform: perspective, rotateX..translateY(2px) scale(1.001);
   
 - Array.prototype.findIndex()
   주어진 판별 함수를 만족하는 배열의 첫 번째 요소의 인덱스를 반환합니다. 만족하는 요소가 하나도 없다면 -1을 반환합니다.
+
+
+## 08 Fun with HTML5 Canvas
+
+### What I Learned
+- `coordinates`
+  1. clientX, clientY
+  스크롤 여부와 관계없이 사용자에게 보여지는 브라우저 페이지를 기준으로 좌표를 표시합니다. 스크롤 여부와 관계가 없다는 말은 사용자가 현재 보는 화면이 페이지 상단이 되고 그 지점의 X, Y 좌표를 0으로 설정한다는 뜻입니다.
+  `clientX`: 브라우저 페이지 상단을 0을 기준으로 X 좌표를 반환합니다.
+  `clientY`: 브라우저 페이지 상단을 0을 기준으로 Y 좌표를 반환합니다.
+
+  2. pageX, pageY
+  `clientX, clientY`와는 달리, 현재 사용자에게 보여지는 브라우저 페이지가 기준이 아닌 해당 문서(document)를 기준으로 X, Y 좌표를 반환합니다. 즉, 스크롤이 발생할지라도 좌표 기준은 해당 문서의 상단으로 변하지 않습니다.
+
+  3. offsetX, offsetY
+  특정 요소(element)를 기준으로 특정 지점의 좌표를 반환합니다.
+
+  4. screenX, screenY
+  모니터를 기준으로 X, Y 좌표를 반환합니다.
+
+- `canvas`
+  `querySelector`를 이용하여 canvas 요소의 `getContext()` 메서드를 이용합니다. `getContext()` 메서드는 캔버스의 드로잉 컨텍스트 객체를 반환합니다.
+  ```
+  const canvas = document.querySelector("#draw");
+  const ctx = canvas.getContext("2d");
+  ```
+  - ctx를 이용하여 다양한 설정이 가능합니다.
+  - `globalCompositeOperation` 프로퍼티를 이용하여 겹치는 부분에 대한 설정이 가능합니다.
+  - 파라미터로 `2d`, `webgl`, `webgl2`, `bitmaprenderer`를 받습니다.
