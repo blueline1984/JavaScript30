@@ -272,11 +272,11 @@ transform: perspective, rotateX..translateY(2px) scale(1.001);
   모니터를 기준으로 X, Y 좌표를 반환합니다.
 
 - `canvas`
-  `querySelector`를 이용하여 canvas 요소의 `getContext()` 메서드를 이용합니다. `getContext()` 메서드는 캔버스의 드로잉 컨텍스트 객체를 반환합니다.
+  1. `querySelector`를 이용하여 canvas 요소의 `getContext()` 메서드를 이용합니다. `getContext()` 메서드는 캔버스의 드로잉 컨텍스트 객체를 반환합니다.
   ```
   const canvas = document.querySelector("#draw");
   const ctx = canvas.getContext("2d");
   ```
-  - ctx를 이용하여 다양한 설정이 가능합니다.
-  - `globalCompositeOperation` 프로퍼티를 이용하여 겹치는 부분에 대한 설정이 가능합니다.
-  - 파라미터로 `2d`, `webgl`, `webgl2`, `bitmaprenderer`를 받습니다.
+  2. ctx를 이용하여 다양한 설정이 가능합니다.
+  3. `globalCompositeOperation` 프로퍼티를 이용하여 겹치는 부분에 대한 설정이 가능합니다.
+  4. 파라미터로 `2d`, `webgl`, `webgl2`, `bitmaprenderer`를 받습니다.
