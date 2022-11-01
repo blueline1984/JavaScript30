@@ -239,17 +239,17 @@ nth-child(even)
 transform: perspective, rotateX..translateY(2px) scale(1.001);
 
 
-## 07 Type Ahead 22.10.28
-- Array.prototype.some()
+## 07 Array Cardio Day 2 22.10.28
+- `Array.prototype.some()`
   배열 안의 어떤 요소라도(하나라도) 주어진 판별 함수를 통과하는지 확인하고 통과하는 요소가 하나라도 있다면 true, 하나도 없다면 false를 반환합니다.
 
-- Array.prototype.every()
+- `Array.prototype.every()`
   배열 안의 모든 요소가 주어진 판별 함수를 통과하는지 확인하고 통과할 경우 true, 그렇지 않을 경우에는 false를 반환합니다.
 
-- Array.prototype.find()
+- `Array.prototype.find()`
   주어진 판별 함수를 통과하는 배열의 첫 번째 요소의 값을 반환합니다. 통과하는 요소가 하나도 없다면 undefined를 반환합니다.
   
-- Array.prototype.findIndex()
+- `Array.prototype.findIndex()`
   주어진 판별 함수를 만족하는 배열의 첫 번째 요소의 인덱스를 반환합니다. 만족하는 요소가 하나도 없다면 -1을 반환합니다.
 
 
